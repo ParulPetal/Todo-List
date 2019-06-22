@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ShoppingList';
+
+
+  items = ["Mango", "Potato", "Paneer"];
+
+  newItem = "";
+  pushItem = function () {
+
+    if (this.newItem != "") {
+      this.items.push(this.newItem);
+      this.newItem = "";
+    }
+  }
+
+  removeItem= function(index){
+this.items.splice(index,1);
+
+
+  }
 }
